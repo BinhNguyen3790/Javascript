@@ -1,0 +1,58 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+
+<head>
+  <!-- include head.html -->
+  @@include('@@webRoot/layouts/head.html', {
+  "title": "Kuma Template | About"
+  })
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <main>
+      <!-- include header.html -->
+      @@include('@@webRoot/inc/header.html')
+
+      <!-- include banner.html -->
+      @@include('@@webRoot/inc/banner.html', {
+      "topPage": "false",
+      "page": "about",
+      "en": "Banner About",
+      "jp": "声の様お"
+      })
+
+      <!-- include breadcrumb.html -->
+      <nav class="breadcrumbPage" aria-label="breadcrumb">
+        <div class="inner">
+          <ol class="breadcrumb">
+            <li class="breadcrumb__item home"><a href="@@webRoot/index.html">ホーム</a></li>
+            <li class="breadcrumb__item" aria-current="page">お客様の声</li>
+          </ol>
+        </div>
+      </nav>
+      <!-- /Breadcrumb -->
+
+      <div class="lContainer topPage">
+        <div class="mContainer">
+          <div class="inner">
+            Content
+          </div>
+        </div>
+      </div>
+
+      <!-- include footer.html -->
+      @@include('@@webRoot/inc/footer.html')
+
+    </main>
+    <!-- /Main -->
+
+  </div>
+  <!-- /Wrapper -->
+
+  <!-- include scripts.html -->
+  @@include('@@webRoot/layouts/scripts.html')
+</body>
+
+</html>
