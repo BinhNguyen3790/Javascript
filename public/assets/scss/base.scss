@@ -43,3 +43,53 @@ body {
   @include inner();
   margin: 0 auto;
 }
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 700;
+}
+h1 {
+  text-align: center;
+  padding: 1rem;
+  margin: 5rem 0 !important;
+  text-transform: uppercase;
+}
+h2 {
+  border-bottom: 1px solid #0099ff;
+  padding-bottom: 0.5rem;
+  margin-bottom: 3rem !important;
+  text-transform: uppercase;
+  color: #0099ff !important;
+}
+h3 {
+  margin-bottom: 2rem !important;
+  text-transform: uppercase;
+  background-color: #a4dbff;
+  padding: 0.5rem;
+  border-radius: 3px;
+}
+button {
+  background-color: transparent;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border-color: #0099ff;
+  color: #0099ff !important;
+  &:hover {
+    color: #ffffff !important;
+    background-color: #0099ff;
+  }
+}
+.boxCtn {
+  margin-bottom: 5rem;
+  &__item {
+    margin-bottom: 3rem;
+  }
+}
+
+footer {
+  text-align: center;
+}
+.nav {
+  margin-bottom: 3rem;
+}

@@ -18,7 +18,59 @@
       <div class="lContainer topPage">
         <div class="mContainer">
           <div class="inner">
-            Content
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active" id="jstutorial-tab" data-toggle="tab" href="#jstutorial" role="tab" aria-controls="jstutorial" aria-selected="true">JS Tutorial</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+              </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+              <div class="tab-pane fade show active" id="jstutorial" role="tabpanel" aria-labelledby="jstutorial-tab">
+                <div class="boxCtn">
+                  <h2 class="h2">Introduction</h2>
+                  <div class="boxCtn__item">
+                    <h3 class="h3">Change Content:</h3>
+                    <button type="button" onclick="getDate();">Get Date</button>
+                    <p id="demo"></p>
+                  </div>
+                  <div class="boxCtn__item">
+                    <h3 class="h3">Change Value:</h3>
+                    <button onclick="changeImgOn();">Turn on the light</button>
+                    <img id="myImage" src="https://www.w3schools.com/js/pic_bulboff.gif" style="width:100px">
+                    <button onclick="changeImgOff();">Turn off the light</button>
+                  </div>
+                  <div class="boxCtn__item">
+                    <h3 class="h3">Change CSS:</h3>
+                    <button type="button" onclick="changeCss();">Change CSS</button>
+                    <p id="changeCss">Hello World</p>
+                  </div>
+                  <div class="boxCtn__item">
+                    <h3 class="h3">Hide Show Element:</h3>
+                    <button onclick="hideMe();">Hide</button>
+                    <button onclick="showMe();">Show</button>
+                    <p id="hideShow">Hide Me!</p>
+                  </div>
+                </div>
+                <div class="boxCtn">
+                  <h2 class="h2">JavaScript Where To</h2>
+                  <div class="boxCtn__item">
+                    <h3 class="h3">The script Tag</h3>
+                    <button onclick="whereTo();">Where To</button>
+                    <p id="whereTo"></p>
+                  </div>
+                </div>
+                <div class="boxCtn">
+                  <h2 class="h2">JavaScript Output</h2>
+                  <div class="boxCtn__item">
+                    <h3 class="h3">JavaScript Display Possibilities</h3>
+                    <button onclick="printPage();">Print this page</button>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+            </div>
           </div>
         </div>
       </div>
