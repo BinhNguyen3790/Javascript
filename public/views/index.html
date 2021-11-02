@@ -4,7 +4,7 @@
 <head>
   <!-- include head.html -->
   @@include('@@webRoot/layouts/head.html', {
-  "title": "Kuma Template"
+  "title": "Javascript Tutorial"
   })
 </head>
 
@@ -14,25 +14,6 @@
     <main>
       <!-- include header.html -->
       @@include('@@webRoot/inc/header.html')
-
-      <!-- include banner.html -->
-      @@include('@@webRoot/inc/banner.html', {
-      "topPage": "true",
-      "page": "top",
-      "en": "Banner Top",
-      "jp": "お客様の声"
-      })
-
-      <!-- include breadcrumb.html -->
-      <nav class="breadcrumbPage" aria-label="breadcrumb">
-        <div class="inner">
-          <ol class="breadcrumb">
-            <li class="breadcrumb__item home"><a href="@@webRoot/index.html">ホーム</a></li>
-            <li class="breadcrumb__item" aria-current="page">お客様の声</li>
-          </ol>
-        </div>
-      </nav>
-      <!-- /Breadcrumb -->
 
       <div class="lContainer topPage">
         <div class="mContainer">
