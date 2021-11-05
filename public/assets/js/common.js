@@ -59,12 +59,32 @@ $(".sumOf").click(function (e) {
 })
 
 //===============Javascript Function===================//
-let x = myFunction(4, 3);   
+let x = myFunction(4, 3);
 function myFunction(a, b) {
-  return a * b;             
+  return a * b;
 }
 document.getElementById("showNumber").innerHTML = x;
 
 //===============Javascript Object===================//
-const car = {type:"Fiat", model:"500", color:"white"};
+const car = { type: "Fiat", model: "500", color: "white" };
 document.getElementById("object").innerHTML = "Car type: " + car.type;
+
+//===============JavaScript Template Literals===================//
+let firstName = "John";
+let lastName = "Doe";
+let text = `Welcome ${firstName}, ${lastName}!`;
+document.getElementById("text").innerHTML = text;
+
+//===============JavaScript Aray===================//
+const points = [40,100,1,15,55,10];
+document.getElementById("maxArr").innerHTML = myArr(points);
+function myArr(arr) {
+  let len = arr.length;
+  let max = -Infinity;
+  while(len--) {
+    if(arr[len] > max) {
+      max = arr[len];
+    }
+  }
+  return max;
+}
