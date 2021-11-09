@@ -76,15 +76,62 @@ let text = `Welcome ${firstName}, ${lastName}!`;
 document.getElementById("text").innerHTML = text;
 
 //===============JavaScript Aray===================//
-const points = [40,100,1,15,55,10];
+const points = [40, 100, 1, 15, 55, 10];
 document.getElementById("maxArr").innerHTML = myArr(points);
 function myArr(arr) {
   let len = arr.length;
   let max = -Infinity;
-  while(len--) {
-    if(arr[len] > max) {
+  while (len--) {
+    if (arr[len] > max) {
       max = arr[len];
     }
   }
   return max;
 }
+
+//===============JavaScript Try Catch===================//
+function myFunction() {
+  const message = document.getElementById("p01");
+  message.innerHTML = "";
+  let x = document.getElementById("tryCatch").value;
+  try {
+    if (x == "") throw "empty";
+    if (isNaN(x)) throw "not a number";
+    x = Number(x);
+    if (x < 5) throw "too low";
+    if (x > 10) throw "too high";
+  }
+  catch (err) {
+    message.innerHTML = "Input is " + err;
+  }
+  finally {
+    document.getElementById("tryCatch").value = "";
+  }
+}
+
+//===============JavaScript Class===================//
+class Car {
+  constructor(name, year) {
+    this.name = name;
+    this.year = year;
+  }
+  age() {
+    let date = new Date();
+    return date.getFullYear() - this.year;
+  }
+}
+let myCar = new Car("Ford", 2014);
+document.getElementById("carClass").innerHTML =
+  "My car is " + myCar.age() + " years old.";
+
+//===============JavaScript Json===================//
+let text = '{"employees":[' +
+  '{"firstName":"John","lastName":"Doe" },' +
+  '{"firstName":"Anna","lastName":"Smith" },' +
+  '{"firstName":"Peter","lastName":"Jones" }]}';
+
+const obj = JSON.parse(text);
+document.getElementById("demo").innerHTML =
+  obj.employees[1].firstName + " " + obj.employees[1].lastName;
+
+  
