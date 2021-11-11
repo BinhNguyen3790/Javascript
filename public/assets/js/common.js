@@ -125,13 +125,32 @@ document.getElementById("carClass").innerHTML =
   "My car is " + myCar.age() + " years old.";
 
 //===============JavaScript Json===================//
-let text = '{"employees":[' +
+let textJson = '{"employees":[' +
   '{"firstName":"John","lastName":"Doe" },' +
   '{"firstName":"Anna","lastName":"Smith" },' +
   '{"firstName":"Peter","lastName":"Jones" }]}';
 
-const obj = JSON.parse(text);
-document.getElementById("demo").innerHTML =
+const obj = JSON.parse(textJson);
+document.getElementById("jsonTxt").innerHTML =
   obj.employees[1].firstName + " " + obj.employees[1].lastName;
+//===============JavaScript Accessors===================//
+const person = {
+  fname: "binh",
+  lname: "nguyen",
+  language: "",
+  get name() {
+    return this.fname.toUpperCase();
+  },
+  set lang(lang) {
+    this.language = lang.toUpperCase();
+  }
+}
+person.lang = "en";
 
-  
+document.getElementById("getSet").innerHTML = person.language;
+
+
+const xvalue = function (a, b) { return a * b };
+
+let y = xvalue(4, 3);
+console.log(y);
