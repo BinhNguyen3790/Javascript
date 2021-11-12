@@ -149,8 +149,36 @@ person.lang = "en";
 
 document.getElementById("getSet").innerHTML = person.language;
 
+//===============JavaScript Class Inheritance===================//
+class Car2 {
+  constructor(brand) {
+    this.carname = brand;
+  }
+  present() {
+    return "i have a " + this.carname;
+  }
+}
+class Model extends Car2 {
+  constructor(brand, mod) {
+    super(brand);
+    this.model = mod;
+  }
+  show() {
+    return this.present() + " it is a " + this.model;
+  }
+}
+let myCar2 = new Model("ferari", "Mustang");
+document.getElementById("showCar").innerHTML = myCar2.show();
+// Javascript static method:
+class Name {
+  constructor(name) {
+    this.name = name;
+  }
+  static hello(x) {
+    return "Hello!!" + x.name;
+  }
+}
 
-const xvalue = function (a, b) { return a * b };
+let myName = new Name("Ford");
 
-let y = xvalue(4, 3);
-console.log(y);
+// document.getElementById("showCar").innerHTML = Name.hello(myName);
